@@ -3,6 +3,9 @@ import styled from 'styled-components/native'
 import { color, font } from "../styles"
 import Counter from "../components/Counter"
 import Button from '../components/Button'
+import { Feather } from '@expo/vector-icons';
+import { TouchableOpacity, Text } from 'react-native'
+import { BottomSheet } from '../components/BottomSheet'
 
 export default function CounterScreen() {
     const [counter, setCounter] = useState(0);
@@ -20,7 +23,16 @@ export default function CounterScreen() {
 
             <Footer>
                 <Button onPress={() => setCounter(counter + 1)} type="primary">Adicionar</Button>
+                <CreditIcon>
+                    <Feather name="info" size={32} color={color.gray}/>
+                </CreditIcon>
             </Footer>
+
+            <BottomSheet>
+                <CreditWrapper>
+                    <Text>Text</Text>
+                </CreditWrapper>
+            </BottomSheet>
         </Container>
     )
 }
@@ -58,3 +70,10 @@ const Footer = styled.View`
     justify-content: center;
     align-items: center;
 `;
+
+const CreditIcon = styled(TouchableOpacity)`
+    position: absolute;
+    right: 0;
+`;
+
+const CreditWrapper = styled.View``;
