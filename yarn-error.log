@@ -1,0 +1,52 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js install
+
+PATH: 
+  C:\Users\gease\AppData\Roaming\npm;C:\Program Files\nodejs\;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64\compiler;C:\Program Files (x86)\AMD APP\bin\x86_64;C:\Program Files (x86)\AMD APP\bin\x86;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;C:\Program Files\Microsoft VS Code\bin;C:\Program Files (x86)\Yarn\bin\;C:\Program Files (x86)\AMD\ATI.ACE\Core-Static;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files\Git\cmd;C:\Users\gease\AppData\Local\Microsoft\WindowsApps;C:\Users\gease\AppData\Roaming\npm;C:\flutter\bin;C:\Users\gease\AppData\Local\Yarn\bin
+
+Yarn version: 
+  1.21.1
+
+Node version: 
+  12.14.1
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/hermes-engine/-/hermes-engine-0.2.1.tgz: unexpected end of file
+      at Zlib.zlibOnError [as onerror] (zlib.js:170:17)
+
+npm manifest: 
+  {
+    "main": "node_modules/expo/AppEntry.js",
+    "scripts": {
+      "start": "expo start",
+      "android": "expo start --android",
+      "ios": "expo start --ios",
+      "web": "expo start --web",
+      "eject": "expo eject"
+    },
+    "dependencies": {
+      "expo": "~36.0.0",
+      "react": "~16.9.0",
+      "react-dom": "~16.9.0",
+      "react-native": "https://github.com/expo/react-native/archive/sdk-36.0.0.tar.gz",
+      "react-native-screens": "2.0.0-alpha.12",
+      "react-native-web": "~0.11.7"
+    },
+    "devDependencies": {
+      "@types/react": "~16.9.0",
+      "@types/react-native": "~0.60.23",
+      "@babel/core": "^7.0.0",
+      "babel-preset-expo": "~8.0.0",
+      "typescript": "~3.6.3"
+    },
+    "private": true
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
