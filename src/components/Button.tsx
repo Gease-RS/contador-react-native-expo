@@ -3,10 +3,10 @@ import styled from 'styled-components'
 import { TouchableOpacity } from 'react-native'
 import { color, font } from '../styles'
 
-export default function Button({ children, type }) {
+export default function Button({ children, type, style, onPress }) {
     return(
-        <TouchableOpacity>
-            <ButtonBackground type={type}>
+        <TouchableOpacity onPress={onPress}>
+            <ButtonBackground style={style} type={type}>
                 <ButtonText type={type}>{children}</ButtonText>
             </ButtonBackground>   
         </TouchableOpacity>     
@@ -24,7 +24,7 @@ const buttonType = {
 },
 }
 const ButtonBackground = styled.View.attrs(props => ({
-    type: props.type || 'default'
+    type: props.type || "default"
 }))`
     background-color: ${props => buttonType[props.type].backgroundColor};
     padding: 14px 24px;
@@ -34,8 +34,8 @@ const ButtonBackground = styled.View.attrs(props => ({
     justify-content: center;
 `;
 
-const ButtonText = styled.View.attrs(props => ({
-    type: props.type || 'default'
+const ButtonText = styled.Text.attrs(props => ({
+    type: props.type || "default"
 }))`
     font-size: 16px;
     font-family: ${font.body};
