@@ -6,6 +6,7 @@ import Button from '../components/Button'
 import { Feather } from '@expo/vector-icons';
 import { TouchableOpacity, Text } from 'react-native'
 import { BottomSheet } from '../components/BottomSheet'
+import LogoSvg from '../components/Logosvg'
 
 export default function CounterScreen() {
     const [counter, setCounter] = useState(0);
@@ -31,6 +32,8 @@ export default function CounterScreen() {
             <BottomSheet>
                 <CreditWrapper>
                     <Text>Text</Text>
+                    <LogoSvg/>
+                    <CreditText>Esse aplicativo foi desenvolvimento para teinamento.</CreditText>
                 </CreditWrapper>
             </BottomSheet>
         </Container>
@@ -76,4 +79,16 @@ const CreditIcon = styled(TouchableOpacity)`
     right: 0;
 `;
 
-const CreditWrapper = styled.View``;
+const CreditWrapper = styled.View`
+    justify-content: center;
+`;
+
+const CreditText = styled.Text`
+	color: ${color.black};
+	font-family: ${font.body};
+	font-size: 16px;
+	text-align: center;
+	width: 289px;
+	margin-top: 44px;
+	margin-bottom: 70px;
+`;
